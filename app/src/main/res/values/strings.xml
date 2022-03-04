@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DrinkWaterReminder</string>
+
+    <!--Bottom Nav Titles-->
+    <string name="mi_home">Home</string>
+    <string name="mi_history">History</string>
+    <string name="mi_info">Info</string>
+    <string name="mi_settings">Settings</string>
 </resources>
