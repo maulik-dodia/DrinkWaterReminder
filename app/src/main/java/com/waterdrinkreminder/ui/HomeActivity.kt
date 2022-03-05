@@ -1,12 +1,14 @@
-package com.waterdrinkreminder
+package com.waterdrinkreminder.ui
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.waterdrinkreminder.R
 import com.waterdrinkreminder.databinding.ActivityHomeBinding
-import com.waterdrinkreminder.util.Constant.TWO
 import com.waterdrinkreminder.viewmodel.SplashViewModel
 
 class HomeActivity : AppCompatActivity() {
@@ -25,8 +27,10 @@ class HomeActivity : AppCompatActivity() {
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
         dataBinding.apply {
             bottomNavView.apply {
-                background = null
-                menu.getItem(TWO).isEnabled = false
+                /*background = null
+                menu.getItem(TWO).isEnabled = false*/
+                val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_nav_host_fragment) as NavHostFragment
+                setupWithNavController(navHostFragment.navController)
             }
         }
     }

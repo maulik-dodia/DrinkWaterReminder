@@ -2,26 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mi_home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
         android:title="@string/mi_home" />
 
     <item
-        android:id="@+id/mi_history"
+        android:id="@+id/historyFragment"
         android:icon="@drawable/ic_history"
         android:title="@string/mi_history" />
 
-    <item
+    <!--<item
         android:id="@+id/mi_placeholder"
-        android:title="" />
+        android:title="" />-->
 
     <item
-        android:id="@+id/mi_info"
+        android:id="@+id/infoFragment"
         android:icon="@drawable/ic_info"
         android:title="@string/mi_info" />
 
     <item
-        android:id="@+id/mi_settings"
+        android:id="@+id/settingsFragment"
         android:icon="@drawable/ic_settings"
         android:title="@string/mi_settings" />
 </menu>
