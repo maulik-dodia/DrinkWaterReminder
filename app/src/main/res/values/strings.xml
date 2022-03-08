@@ -6,4 +6,14 @@
     <string name="mi_history">History</string>
     <string name="mi_info">Info</string>
     <string name="mi_settings">Settings</string>
+
+    <!--Settings Screen-->
+    <string name="settings_name">Name</string>
+    <string name="settings_save">Save</string>
+    <string name="settings_male">Male</string>
+    <string name="settings_female">Female</string>
+    <string name="settings_weight">Weight(kg)</string>
+    <string name="settings_height">Height(cm)</string>
+    <string name="settings_dob">Date of birth</string>
+    <string name="settings_select_date">Select date</string>
 </resources>
