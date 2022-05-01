@@ -20,6 +20,8 @@ class SettingsFragment : Fragment() {
 
     private lateinit var dataBinding: FragmentSettingsBinding
 
+    private var dateOfBirth: Long = 0
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,23 +29,24 @@ class SettingsFragment : Fragment() {
     ): View? {
         dataBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_settings, container, false)
-
         dataBinding.etvDob.setOnClickListener {
             val constraintsBuilder =
                 CalendarConstraints.Builder()
-                    .setValidator(DateValidatorPointBackward.now()).build()
+                    .setValidator(DateValidatorPointBackward.now())
+                    .build()
+            val prevSelectedDate = if(dateOfBirth != 0L) dateOfBirth else MaterialDatePicker.todayInUtcMilliseconds()
             val datePicker =
                 MaterialDatePicker.Builder.datePicker()
                     .setTitleText(R.string.settings_select_date)
-                    .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                    .setSelection(prevSelectedDate)
                     .setCalendarConstraints(constraintsBuilder)
                     .build()
             activity?.supportFragmentManager?.let { activityContext ->
                 datePicker.apply {
                     show(activityContext, null)
                     addOnPositiveButtonClickListener {
-                        val dateString: String =
-                            DateFormat.format(ddMMMyyyy, Date(it)).toString()
+                        dateOfBirth = it
+                        val dateString = DateFormat.format(ddMMMyyyy, Date(it)).toString()
                         dataBinding.etvDob.setText(dateString)
                     }
                 }
