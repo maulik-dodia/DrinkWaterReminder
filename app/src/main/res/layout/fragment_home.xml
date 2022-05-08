@@ -1,16 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textAppearance="@android:style/TextAppearance.Material.Display1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_water_drank_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Display4"
+                android:textSize="@dimen/sp_100"
+                app:layout_constraintBottom_toTopOf="@+id/tv_total_water_drank"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="50.72%" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_total_water_drank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Display2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_forward_slash"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1050" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_forward_slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="/"
+                android:textAppearance="@android:style/TextAppearance.Material.Display2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_total_water_drink_target"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_total_water_drank"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="/" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_total_water_drink_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Display2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_forward_slash"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2070" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_last_water_drink_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:text="You drank water of 150ml at 02:07 pm today!"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_water_drank"
+                tools:text="You drank water of 150ml at 02:07 pm today!" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_50_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:text="@string/home_50_ml"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                app:layout_constraintEnd_toStartOf="@+id/btn_100_ml"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_last_water_drink_info" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_100_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:text="@string/home_100_ml"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_50_ml"
+                app:layout_constraintEnd_toStartOf="@+id/btn_150_ml"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/btn_50_ml"
+                app:layout_constraintTop_toTopOf="@+id/btn_50_ml" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_150_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:text="@string/home_150_ml"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_50_ml"
+                app:layout_constraintEnd_toStartOf="@+id/btn_200_ml"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/btn_100_ml"
+                app:layout_constraintTop_toTopOf="@+id/btn_50_ml" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_200_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/home_200_ml"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_50_ml"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/btn_150_ml"
+                app:layout_constraintTop_toTopOf="@+id/btn_50_ml" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_add"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
