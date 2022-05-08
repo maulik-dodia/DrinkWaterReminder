@@ -39,7 +39,7 @@
             app:fabCradleRoundedCornerRadius="@dimen/dp_20"
             app:fabCradleVerticalOffset="@dimen/dp_10">-->
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:contentDescription="@null"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />-->
         <!--app:layout_anchor="@id/bottom_app_bar"-->
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

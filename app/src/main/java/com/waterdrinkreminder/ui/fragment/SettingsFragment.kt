@@ -25,7 +25,7 @@ class SettingsFragment : Fragment() {
 
     private lateinit var dataBinding: FragmentSettingsBinding
 
-    private var selectedDob: Long = 0
+    private var selectedDob: Long? = null
     private var selectedGetInBedHour: Int? = null
     private var selectedGetInBedMinute: Int? = null
     private var selectedWakeupHour: Int? = null
@@ -46,7 +46,7 @@ class SettingsFragment : Fragment() {
                 CalendarConstraints.Builder()
                     .setValidator(DateValidatorPointBackward.now())
                     .build()
-            val prevSelectedDate = if(selectedDob != 0L) selectedDob else MaterialDatePicker.todayInUtcMilliseconds()
+            val prevSelectedDate = selectedDob ?: System.currentTimeMillis()
             val datePicker =
                 MaterialDatePicker.Builder.datePicker()
                     .setTitleText(R.string.settings_select_date)
