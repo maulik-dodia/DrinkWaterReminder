@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--___________Dps___________-->
     <dimen name="dp_1">1dp</dimen>
     <dimen name="dp_2">2dp</dimen>
     <dimen name="dp_5">5dp</dimen>
@@ -8,4 +9,9 @@
     <dimen name="dp_16">16dp</dimen>
     <dimen name="dp_20">20dp</dimen>
     <dimen name="dp_25">25dp</dimen>
+    <!--___________Dps___________-->
+
+    <!--___________Sps___________-->
+    <dimen name="sp_100">100sp</dimen>
+    <!--___________Sps___________-->
 </resources>

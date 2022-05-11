@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">DrinkWaterReminder</string>
 
+    <!--Home Screen-->
+    <string name="home_50_ml">50 ml</string>
+    <string name="home_100_ml">100 ml</string>
+    <string name="home_150_ml">150 ml</string>
+    <string name="home_200_ml">200 ml</string>
+
     <!--Bottom Nav Titles-->
     <string name="mi_home">Home</string>
     <string name="mi_info">Info</string>
@@ -26,5 +32,6 @@
     <string name="settings_device_theme">Device theme</string>
 
     // Common in whole app
+    <string name="placeholder_percentage">%.2f%%</string>
     <string name="time_format_hh_colon_mm">%1$s : %2$s</string>
 </resources>
