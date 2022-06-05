@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.asStateFlow
 
 class HomeFagViewModel : ViewModel() {
 
-    private var totalWaterDrinkTarget = 2070F
+    var totalWaterDrinkTarget = 2070F
 
     private val _stateFlowTotalWaterDrank = MutableStateFlow(1050)
     val stateFlowTotalWaterDrank = _stateFlowTotalWaterDrank.asStateFlow()

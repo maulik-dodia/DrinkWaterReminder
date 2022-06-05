@@ -6,6 +6,9 @@
     <string name="home_100_ml">100 ml</string>
     <string name="home_150_ml">150 ml</string>
     <string name="home_200_ml">200 ml</string>
+    <string name="home_end_time">End Time</string>
+    <string name="home_start_time">Start Time</string>
+    <string name="home_remind_me_in_between">Remind me in Between</string>
 
     <!--Bottom Nav Titles-->
     <string name="mi_home">Home</string>
